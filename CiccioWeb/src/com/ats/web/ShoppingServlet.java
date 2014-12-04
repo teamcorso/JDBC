@@ -12,9 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.ats.web.shopping.ICart;
+import com.ats.web.shopping.MapShoppingCart;
 import com.ats.web.shopping.OrderLine;
 import com.ats.web.shopping.Product;
-import com.ats.web.shopping.ShoppingCart;
+import com.ats.web.shopping.FunctionalShoppingCart;
 
 @WebServlet("/goShopping")
 public class ShoppingServlet extends HttpServlet {
@@ -22,13 +24,14 @@ public class ShoppingServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
+		ICart cart = (ICart) session.getAttribute("cart");
 		PrintWriter pw = response.getWriter();
 		pw.print("<html>");
 		pw.print("<body>");
 		pw.print("<a href='BuyForm.html'> <--- Torna allo shopping!</a><br />");
 		if (cart == null) {
-			cart = new ShoppingCart();
+			//cart = new FunctionalShoppingCart();
+			cart = new MapShoppingCart();
 			session.setAttribute("cart", cart);
 		}
 

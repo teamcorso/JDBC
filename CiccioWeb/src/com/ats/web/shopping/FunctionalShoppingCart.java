@@ -6,13 +6,17 @@ import java.util.Collections;
 import java.util.List;
 
 
-public class ShoppingCart {
+public class FunctionalShoppingCart implements ICart {
 	private List<OrderLine> lines = new ArrayList<>();
 
+	
+	@Override
 	public Collection<OrderLine> orderLines() {
 		return Collections.unmodifiableCollection(lines);
 	}
 
+	
+	@Override
 	public void add(Product prod, int quantity) {
 		lines.stream().filter(line -> line.getProduct().equals(prod))
 				.findFirst().orElseGet(() -> {
@@ -23,12 +27,16 @@ public class ShoppingCart {
 
 	}
 
+	
+	@Override
 	public double total() {
 		return lines.stream()
 			.map(line -> line.getPrice())
 			.reduce(Double::sum).orElse(0.0);
 	}
 	
+	
+	@Override
 	public boolean isEmpty() {
 		return lines.isEmpty();
 	}
