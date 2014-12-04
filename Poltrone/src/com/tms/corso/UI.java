@@ -8,7 +8,7 @@ import com.tms.corso.datasources.*;
 public class UI {
 
 	public static void main(String[] args) {
-		
+		System.out.println("hello world");
 		System.out.println("Vuoi lavorare con:");
 		System.out.println("m) dati in memoria");
 		System.out.println("t) dati su file di testo");
