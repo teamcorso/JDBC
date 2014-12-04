@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="readMyData" method="GET">
+		<label for="name">Name:</label><input type="text" name="name" /><br />
+		<label for="lastname"> Last Name:</label><input type="text"
+			name="lastname" /><br /> <input type="checkbox"
+			name="driverLicence" value="CAR" />I have a car driving licence<br />
+		<input type="checkbox" name="driverLicence" value="BIKE" />I have a
+		motorcycle driving licence<br /> <input type="checkbox"
+			name="driverLicence" value="TRUCK" /> have a truck driving licence<br />
+		<select name="skills" multiple>
+			<option value="C++" selected>C++ Language</option>
+			<option value="SCALA">Scala Language</option>
+			<option value="JAVA" selected>Java Language</option>
+			<option value="WEB">Web Design</option>
+			<option value="SYSWIN">Windows System Administration</option>
+			<option value="CSYSLINUX">Linux System Administration</option>
+		</select> <br /> <BR />
+		<INPUT type="radio" name="sex" value="M" />I am Male <BR />
+		<INPUT type="radio" name="sex" value="F" checked="checked" />I am Female <BR />
+		<INPUT type="radio" name="sex" value="U" />I am not sure<BR />
+		<input type="submit" value="save" />
+
+	</form>
+</body>
+</html>
