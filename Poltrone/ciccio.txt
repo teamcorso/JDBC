@@ -1,0 +1,16 @@
+Manuel=Scinta=10/12/1990=java=Fisica=7
+Manuela=Messina=10/12/1990=java=Ingegneria=7
+Teresa=Morini=10/12/1990=java=Fisica=8
+Francesco=Giangaspero=10/12/1990=java=Matematica=9
+Luca=De Stefano=10/12/1990=java=Matematica=9
+Maria=Petrillo=10/12/1990=java=Ingegneria=9
+Sophie=Molinengo=10/12/1990=java=Fisica=9
+Luca=Amadio=10/12/1990=java=Matematica=9
+Valentina=Venturini=10/12/1990=java=Ingegneria=10
+Rossella=Luongo=10/12/1990=java=Ingegneria=9
+Alessandro=De Benedictis=10/12/1990=java=Ingegneria=9
+Michele=Minchio=10/12/1990=java=Fisica=6
+Francesco=Biglieri=10/12/1990=java=Fisica=6
+Leonardo=Benvenuto=10/12/1990=java=Ingegneria=9
+Nicola=Punzi=10/12/1990=java=Ingegneria=7
+Sandro=Zaninello=10/12/1990=java=Web=8
