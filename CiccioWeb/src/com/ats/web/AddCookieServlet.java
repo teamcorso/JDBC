@@ -2,6 +2,7 @@ package com.ats.web;
 
 import java.io.IOException;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -10,12 +11,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
+
+
 @WebServlet("/AddCookies")
 public class AddCookieServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
 	}
+	
+
+	
+	@Override
+	public void init() throws ServletException {
+		
+	}
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String nomeUtente = request.getParameter("nome");
+		
 		Cookie temp= new Cookie("temp_cookie", "i'm_temp_cookie");
 		temp.setMaxAge(-1);
 		Cookie perm= new Cookie("perm_cookie", "i'm_perm_cookie");
