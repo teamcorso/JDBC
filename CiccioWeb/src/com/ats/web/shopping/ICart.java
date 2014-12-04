@@ -4,12 +4,14 @@ import java.util.Collection;
 
 public interface ICart {
 
-	public abstract Collection<OrderLine> orderLines();
+	Collection<OrderLine> orderLines();
 
-	public abstract void add(Product prod, int quantity);
+	void add(Product prod, int quantity);
 
-	public abstract double total();
+	double total();
 
-	public abstract boolean isEmpty();
+	boolean isEmpty();
+	
+	void clear();
 
 }

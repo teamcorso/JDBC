@@ -37,4 +37,10 @@ public class MapShoppingCart implements ICart {
 		return lineMap.isEmpty();
 	}
 
+	@Override
+	public void clear() {
+		lineMap.clear();
+		
+	}
+
 }

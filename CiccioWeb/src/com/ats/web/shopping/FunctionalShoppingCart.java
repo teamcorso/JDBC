@@ -40,6 +40,13 @@ public class FunctionalShoppingCart implements ICart {
 	public boolean isEmpty() {
 		return lines.isEmpty();
 	}
+
+
+	@Override
+	public void clear() {
+		lines.clear();
+		
+	}
 	
 	
 

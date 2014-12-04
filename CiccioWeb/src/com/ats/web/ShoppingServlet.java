@@ -23,24 +23,31 @@ public class ShoppingServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		
+	
 		HttpSession session = request.getSession();
 		ICart cart = (ICart) session.getAttribute("cart");
-		PrintWriter pw = response.getWriter();
-		pw.print("<html>");
-		pw.print("<body>");
-		pw.print("<a href='BuyForm.html'> <--- Torna allo shopping!</a><br />");
 		if (cart == null) {
 			//cart = new FunctionalShoppingCart();
 			cart = new MapShoppingCart();
 			session.setAttribute("cart", cart);
 		}
-
+		String clear = request.getParameter("clear");
 		String name = request.getParameter("name");
-		if (name != null) {
+		if( clear != null)
+		{
+			cart.clear();
+			
+		}
+		else if (name != null) {
 			int quantity = Integer.parseInt(request.getParameter("quantity"));
 			Product prod = new Product(name);
 			cart.add(prod, quantity);
 		}
+		PrintWriter pw = response.getWriter();
+		pw.print("<html>");
+		pw.print("<body>");
+		pw.print("<a href='BuyForm.html'> <--- Torna allo shopping!</a><br />");
 		if (cart.isEmpty()) {
 			pw.println("<h1>Your cart is empty</h1>");
 		} else {
@@ -62,6 +69,10 @@ public class ShoppingServlet extends HttpServlet {
 			pw.printf("<h3>Your Total: %.2f</h3>", cart.total());
 
 		}
+		pw.println("<form method='POST'>");
+		pw.print("<input type='submit' name='clear' value ='clear cart'>");
+		pw.println("</form>");
+		
 		pw.print("</body>");
 		pw.print("</html>");
 	}
