@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.util.Collection;
 import java.util.List;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -37,7 +38,7 @@ public class ShoppingServlet extends HttpServlet {
 		if( clear != null)
 		{
 			cart.clear();
-			
+		// ServletContext application = this.getServletContext().setAttribute(arg0, arg1);
 		}
 		else if (name != null) {
 			int quantity = Integer.parseInt(request.getParameter("quantity"));

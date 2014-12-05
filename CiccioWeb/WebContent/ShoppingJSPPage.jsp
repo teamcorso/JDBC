@@ -55,5 +55,14 @@
 	<input type = "Submit" name = "clear" value = "Svuota carrello">
 	
 	</form>
+	
+	<% request.setAttribute("squareIt", new Integer(7)); %>
+ 
+    <% int i = ((Integer) request.getAttribute("squareIt")); %>
+     <%= i * i %>
+	
+	${squareIt * squareIt}
+	
+	
 </body>
 </html>
