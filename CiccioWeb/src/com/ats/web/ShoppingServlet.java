@@ -28,8 +28,8 @@ public class ShoppingServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		ICart cart = (ICart) session.getAttribute("cart");
 		if (cart == null) {
-			//cart = new FunctionalShoppingCart();
 			cart = new MapShoppingCart();
+			//cart = new FunctionalShoppingCart();
 			session.setAttribute("cart", cart);
 		}
 		String clear = request.getParameter("clear");
