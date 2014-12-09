@@ -5,17 +5,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Master Page</title>
-
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
+  <% 
+     int numComp1 = 8;
+     int numComp2 = 7;
+  
+     request.setAttribute("num1", 6);
+     request.setAttribute("num2", 7);
+   %>
   <h1>I am the Master Page</h1>
   <section id = "sec1">
     <jsp:include page="simpleHTML.html"/>
   </section>
    
   <section id = "sec2">
-     <jsp:include page="simpleJSP.jsp"/>
+     <%@include file="../WEB-INF/hidden/simpleJSP.jsp" %>
   </section>
 </body>
 </html>

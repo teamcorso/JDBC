@@ -4,13 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Computational Physics Again</title>
+<title>IYou will never see this</title>
 </head>
 <body>
- 
-   <p>Il risultato e'..... ${num1 * num2}</p>
-   
-   <%= numComp1 * numComp2 %>
-   
+  <%
+     int x = Integer.parseInt(request.getParameter("num1"));
+     int y = Integer.parseInt(request.getParameter("num2"));
+     
+     request.setAttribute("result", x*y);
+  %>
+  
+  <jsp:forward page="showResult.jsp"/>
 </body>
 </html>

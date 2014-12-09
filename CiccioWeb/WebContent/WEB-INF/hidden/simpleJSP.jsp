@@ -8,7 +8,7 @@
 </head>
 <body>
  
-   <p>Il risultato e'..... ${num1 * num2}</p>
+   <p>e...il risultato e'..... ${num1 * num2}</p>
    
    <%= numComp1 * numComp2 %>
    

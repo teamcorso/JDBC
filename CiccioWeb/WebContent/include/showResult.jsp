@@ -4,13 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Computational Physics Again</title>
+<title>Comptation result</title>
 </head>
 <body>
- 
-   <p>Il risultato e'..... ${num1 * num2}</p>
-   
-   <%= numComp1 * numComp2 %>
-   
+  <p>Il risultato e'${result}</p>
+  <p>Il risultato e'<%= request.getAttribute("result") %> </p>
 </body>
 </html>
