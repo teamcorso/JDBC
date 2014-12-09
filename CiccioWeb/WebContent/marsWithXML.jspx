@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	<jsp:directive.page contentType="text/html; charset=ISO-8859-1"
+		pageEncoding="ISO-8859-1" session="false" />
+	<jsp:output doctype-root-element="html"
+		doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
+		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+		omit-xml-declaration="true" />
+	<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+	<jsp:scriptlet>
+		/* Scriptlet 1 */
+		String[] planets = { "Mercury", "Venus", "Earth", "Mars",
+				"Jupiter", "Saturn", "Uranus", "Neptune", "Pluto" };
+
+	</jsp:scriptlet>
+	<table>
+		<tr>
+			<th><b>The Planets in order by distance from the Sun</b></th>
+		</tr>
+
+		<jsp:scriptlet>
+			<![CDATA[
+			for (int i = 0; i < planets.length; i++) { /* Scriptlet 2 */
+				if (i == 3) { // fourth rock from the sun
+				  ]]>
+		</jsp:scriptlet>
+		<tr>
+			<td><font color="red"> <jsp:expression>(planets[i] + ", the red planet").toUpperCase()</jsp:expression></font></td>
+		</tr>
+		<jsp:scriptlet>
+			} else { /* Scriptlet 3 */
+		</jsp:scriptlet>
+		<tr>
+			<td><jsp:expression>planets[i]</jsp:expression></td>
+		</tr>
+		<jsp:scriptlet>
+			} /* Scriptlet 4 */
+			}
+		</jsp:scriptlet>
+	</table>
+</body>
+	</html>
+</jsp:root>
