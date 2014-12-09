@@ -1,0 +1,10 @@
+#sec1 , #sec2 {
+	width: 370px;
+	height: 370px;
+	border: 3px dashed orange;
+	float: left;
+	margin: 20px;
+	padding: 10px;
+	color: blue;
+}
+

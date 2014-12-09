@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add a Dog</title>
+</head>
+<body>
+  <form action="../beans/RegisterDog.jsp" method="GET">
+		<label for="name">Name:</label><input type="text" name="name" /><br />
+		<label for="color">Colore:</label><input type="text" name="color" /><br />
+		<label for="age"> Age:</label><input type="number" name="age" /><br /> 
+		<label for="weight"> Weight:</label><input type="number" name="weight" /><br /> 
+		<select name="breed">
+			<option value="bassotto" selected>Bassotto</option>
+			<option value="San Berdardo">San Bernardo</option>
+			<option value="Cane Lupo" selected>Cane Lupo</option>
+			<option value="Collie">Collie</option>
+		</select> <br /> <BR />
+		<input type="submit" value="save" />
+
+	</form>
+</body>
+</html>
