@@ -8,12 +8,12 @@
 </head>
 <body>
    <h1>Jsp che legge parametri di inizializzazione(o almeno ci prova...)</h1>
-    URL:  <%= config.getInitParameter("URL") %><br />
-    User: <%= getInitParameter("user") %><br />
+    URL:  <%= getServletConfig().getInitParameter("URL") %><br />
+    User: <%= config.getInitParameter("user") %><br />
     Password: <%= getInitParameter("password") %><br />
    
     <%
-      String x =  getServletConfig().getInitParameter("URL");
+      String x =  getInitParameter("URL");
       out.print(x);
     
     %>
